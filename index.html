@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="冉小龙的数据分析与自动化面试作品集，使用脱敏数据展示自动化运营、经营分析、目标管理与用户行为分析实践。">
+  <title>冉小龙｜数据分析与自动化作品集</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231F5D87'/%3E%3Cpath d='M18 18h28v8H34v20h-8V26h-8z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=20260729-blue2">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="返回首页">冉小龙</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+        <span class="sr-only">打开导航</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="主导航">
+        <a href="#projects">项目案例</a>
+        <a href="#method">方法与能力</a>
+        <a href="#about">关于我</a>
+      </nav>
+      <a class="header-action" href="#projects">查看作品</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy reveal">
+          <h1>把业务问题，<br>做成可复用的数据产品</h1>
+          <p class="hero-role">数据分析师｜数据自动化与 AI 提效</p>
+          <p class="hero-summary">从数据建模、指标体系到自动预警与业务闭环，用脱敏案例展示四项数据分析与自动化项目的完整交付过程。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">
+              查看项目
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+            </a>
+            <a class="button button-secondary" href="#method">
+              能力概览
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <dl class="hero-proof" aria-label="项目成果">
+            <div><dt>1W+</dt><dd>订单级数据</dd></div>
+            <div><dt>10+</dt><dd>分析模块</dd></div>
+            <div><dt>40h+/m</dt><dd>节省工时</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-media reveal" aria-label="项目看板预览">
+          <button class="dashboard-window dashboard-window-back zoom-trigger" type="button"
+                  data-image="assets/rental-operations-sanitized.png" data-title="经营分析看板（脱敏版）">
+            <span class="window-bar"><i></i><i></i><i></i></span>
+            <img src="assets/rental-operations-sanitized.png" alt="租赁业务经营分析脱敏看板">
+          </button>
+          <button class="dashboard-window dashboard-window-front zoom-trigger" type="button"
+                  data-image="assets/rental-fulfillment-sanitized.png" data-title="履约时效监控（脱敏版）">
+            <span class="window-bar"><i></i><i></i><i></i></span>
+            <img src="assets/rental-fulfillment-sanitized.png" alt="租赁业务履约时效监控脱敏看板">
+          </button>
+          <span class="media-hint">面试脱敏版 · 点击查看</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="project-overview section">
+      <div class="container">
+        <div class="section-intro reveal">
+          <div>
+            <h2>项目案例</h2>
+            <span class="section-rule"></span>
+          </div>
+          <p>1项自动化核心案例、1项经营分析重点案例与2项补充案例，所有看板均采用指数、区间和匿名编码展示。</p>
+        </div>
+
+        <article class="overview-row reveal">
+          <div class="overview-copy">
+            <span class="project-number">01</span>
+            <span class="project-type">核心案例 · 自动化闭环</span>
+            <h3>租机业务数据自动化<br>运营系统</h3>
+            <p>将履约监控与经营分析整合为一个业务系统，贯通数据加工、异常识别、看板分析和消息触达。</p>
+            <ul class="check-list">
+              <li>订单明细表、节点表与分析宽表</li>
+              <li>履约异常识别与多级预警</li>
+              <li>经营、区域与产品结构分析</li>
+              <li>任务日志、失败重试与幂等控制</li>
+            </ul>
+            <a class="text-link" href="#case-rental-ai">查看项目详情
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
+            </a>
+          </div>
+          <button class="overview-media zoom-trigger" type="button"
+                  data-image="assets/rental-fulfillment-sanitized.png" data-title="租机业务数据自动化运营系统">
+            <span class="window-bar"><i></i><i></i><i></i></span>
+            <img src="assets/rental-fulfillment-sanitized.png" alt="租赁业务履约时效监控脱敏看板" loading="lazy">
+          </button>
+        </article>
+
+        <article class="overview-row overview-row-reverse reveal">
+          <div class="overview-copy">
+            <span class="project-number">02</span>
+            <span class="project-type">重点案例 · 经营分析</span>
+            <h3>销售经营、产品结构<br>与客户价值分析</h3>
+            <p>基于销售、产品与客户数据，建立时间趋势、ABC分类与RFM客户分层分析体系。</p>
+            <ul class="check-list">
+              <li>销售趋势、同比与区域分布</li>
+              <li>产品ABC分类与帕累托分析</li>
+              <li>RFM客户价值分层</li>
+              <li>时间、产品、客户三类主题看板</li>
+            </ul>
+            <a class="text-link" href="#case-sales-value">查看项目详情
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
+            </a>
+          </div>
+          <button class="overview-media overview-media-landscape zoom-trigger" type="button"
+                  data-image="assets/sales-value-sanitized.png" data-title="销售经营、产品结构与客户价值分析">
+            <span class="window-bar"><i></i><i></i><i></i></span>
+            <img src="assets/sales-value-sanitized.png" alt="销售经营与客户价值分析脱敏看板" loading="lazy">
+          </button>
+        </article>
+
+        <article class="overview-row reveal">
+          <div class="overview-copy">
+            <span class="project-number">03</span>
+            <span class="project-type">补充案例 · 经营 BI</span>
+            <h3>销售目标达成<br>与渠道经营 BI</h3>
+            <p>围绕目标、实际、同比、环比和YTD建立经营简报，支持渠道、品类与省份层面的差异定位。</p>
+            <ul class="check-list">
+              <li>目标达成率与差异分析</li>
+              <li>渠道、品类和区域拆解</li>
+              <li>销售简报、组合分析与日报</li>
+              <li>完整周期对比与指标口径约束</li>
+            </ul>
+            <a class="text-link" href="#case-target-bi">查看项目详情
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
+            </a>
+          </div>
+          <button class="overview-media overview-media-landscape zoom-trigger" type="button"
+                  data-image="assets/target-bi-sanitized.png" data-title="销售目标达成与渠道经营 BI">
+            <span class="window-bar"><i></i><i></i><i></i></span>
+            <img src="assets/target-bi-sanitized.png" alt="销售目标与渠道经营分析脱敏看板" loading="lazy">
+          </button>
+        </article>
+
+        <article class="overview-row overview-row-reverse reveal">
+          <div class="overview-copy">
+            <span class="project-number">04</span>
+            <span class="project-type">补充案例 · 用户分析</span>
+            <h3>电商用户行为、留存<br>与转化分析</h3>
+            <p>从日活与小时活跃趋势切入，延伸至同期群留存和行为漏斗，形成用户行为分析框架。</p>
+            <ul class="check-list">
+              <li>日活、小时活跃与行为趋势</li>
+              <li>同期群留存与可观察窗口</li>
+              <li>浏览—加购—收藏—购买漏斗</li>
+              <li>商品偏好与转化表现分析</li>
+            </ul>
+            <a class="text-link" href="#case-user-behavior">查看项目详情
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
+            </a>
+          </div>
+          <button class="overview-media overview-media-landscape zoom-trigger" type="button"
+                  data-image="assets/user-behavior-sanitized.png" data-title="用户行为、留存与转化分析">
+            <span class="window-bar"><i></i><i></i><i></i></span>
+            <img src="assets/user-behavior-sanitized.png" alt="电商用户行为与留存分析脱敏看板" loading="lazy">
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <section id="case-rental-ai" class="case-study section">
+      <div class="container">
+        <header class="case-header reveal">
+          <span class="case-index">01</span>
+          <div>
+            <h2>租机业务数据自动化运营系统</h2>
+            <p class="case-meta"><span></span>数据分析 / 自动化开发　·　项目周期约2个月</p>
+            <p class="case-lead">将履约监控与经营分析整合为统一的数据产品，形成“识别问题—触达责任人—处理反馈—经营复盘”的自动化闭环。</p>
+          </div>
+        </header>
+
+        <dl class="boss-snapshot reveal" aria-label="项目速览">
+          <div><dt>职责范围</dt><dd>需求梳理 · 表模型设计 · Python规则 · 看板与推送</dd></div>
+          <div><dt>关键问题</dt><dd>多节点人工巡检，异常发现与责任定位不及时</dd></div>
+          <div><dt>交付结果</dt><dd>1W+订单级数据 · 10+模块 · 40h+/m提效</dd></div>
+          <div><dt>技术栈</dt><dd>MySQL · Python · ECharts · Webhook</dd></div>
+        </dl>
+
+        <div class="wide-case-layout">
+          <div class="case-gallery reveal" data-gallery>
+            <div class="gallery-tabs" role="tablist" aria-label="租机业务项目视图">
+              <button class="gallery-tab is-active" type="button" role="tab" aria-selected="true"
+                      data-image="assets/rental-fulfillment-sanitized.png" data-title="履约自动化监控"
+                      data-alt="租赁业务履约时效监控脱敏看板">履约监控</button>
+              <button class="gallery-tab" type="button" role="tab" aria-selected="false"
+                      data-image="assets/rental-operations-sanitized.png" data-title="经营结构分析"
+                      data-alt="租赁业务经营分析脱敏看板">经营分析</button>
+            </div>
+            <button class="gallery-stage zoom-trigger" type="button"
+                    data-image="assets/rental-fulfillment-sanitized.png" data-title="履约自动化监控">
+              <span class="window-bar"><i></i><i></i><i></i><b>面试脱敏版 · 点击放大</b></span>
+              <img class="gallery-image gallery-image-portrait" src="assets/rental-fulfillment-sanitized.png"
+                   alt="租赁业务履约时效监控脱敏看板" loading="lazy">
+              <span class="open-dashboard">查看完整看板</span>
+            </button>
+          </div>
+
+          <div class="case-narrative reveal">
+            <div class="narrative-block">
+              <h3>业务问题</h3>
+              <p>订单履约涉及入库、发货、物流、签收等多个节点，人工逐单检查耗时，异常发现和责任定位不够及时。</p>
+            </div>
+            <div class="narrative-block">
+              <h3>数据底座</h3>
+              <p>统一订单粒度与节点粒度，设计主键和关联关系，构建订单明细表、节点明细表和分析宽表，并以增量更新时间控制数据刷新。</p>
+            </div>
+            <div class="narrative-block">
+              <h3>核心价值</h3>
+              <ul>
+                <li>统一全链路关键节点及时效口径</li>
+                <li>按任务周期识别异常，降低履约风险</li>
+                <li>多级预警与推送，缩短处理闭环</li>
+                <li>看板驱动复盘，持续优化履约体验</li>
+              </ul>
+            </div>
+            <div class="quality-note">
+              <strong>AI能力边界</strong>
+              <p>已落地部分为数据加工、规则识别与消息触达；RAG经营问答和LLM异常摘要作为扩展方案展示，不计入现有项目成果。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pipeline reveal" aria-label="自动化技术链路">
+          <div class="pipeline-title">
+            <h3>技术与自动化链路</h3>
+            <p>从数据获取到业务触达的完整闭环</p>
+          </div>
+          <ol class="pipeline-steps">
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+              <strong>订单数据</strong><span>多源业务表</span>
+            </li>
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+              <strong>MySQL</strong><span>增量查询</span>
+            </li>
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></svg>
+              <strong>Python</strong><span>规则判断</span>
+            </li>
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
+              <strong>ECharts</strong><span>分析看板</span>
+            </li>
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-8 8H6l-3 2 1-5a8 8 0 1117-5z"/><path d="M8 12h8M12 8v8"/></svg>
+              <strong>企业微信</strong><span>Webhook</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="engineering-rail reveal">
+          <div><span>01</span><strong>配置化规则</strong><p>预警时点、阈值与接收人配置化</p></div>
+          <div><span>02</span><strong>运行日志</strong><p>记录任务执行与异常结果</p></div>
+          <div><span>03</span><strong>失败重试</strong><p>降低临时故障对触达的影响</p></div>
+          <div><span>04</span><strong>幂等控制</strong><p>避免同一异常被重复推送</p></div>
+        </div>
+
+        <div class="ai-extension reveal">
+          <div>
+            <span>可扩展方案</span>
+            <h3>从规则自动化延伸到AI辅助决策</h3>
+            <p>以下能力用于说明技术演进方向，未计入现有项目成果。</p>
+          </div>
+          <ul>
+            <li><strong>RAG经营问答</strong><small>接入指标口径、异常SOP与历史处理记录</small></li>
+            <li><strong>LLM异常摘要</strong><small>自动整理异常影响、可能原因与处理建议</small></li>
+            <li><strong>人工复核与评估</strong><small>保留审核节点，记录命中率与反馈结果</small></li>
+          </ul>
+        </div>
+
+        <dl class="result-strip reveal">
+          <div><dt>1W+</dt><dd>订单级数据治理</dd></div>
+          <div><dt>10+</dt><dd>全链路分析模块</dd></div>
+          <div><dt>3级</dt><dd>异常预警阈值</dd></div>
+          <div><dt>40h+/m</dt><dd>自动化节省工时</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="case-sales-value" class="case-study case-study-alt section">
+      <div class="container">
+        <header class="case-header reveal">
+          <span class="case-index">02</span>
+          <div>
+            <h2>销售经营、产品结构与客户价值分析</h2>
+            <p class="case-meta"><span></span>数据分析 / Power BI</p>
+            <p class="case-lead">基于销售订单、产品和客户数据，构建时间、产品、客户三个主题视图，回答“卖得怎么样、靠什么卖、客户价值如何”。</p>
+          </div>
+        </header>
+
+        <dl class="boss-snapshot reveal" aria-label="项目速览">
+          <div><dt>职责范围</dt><dd>数据清洗 · 指标建模 · 分析框架 · Power BI交付</dd></div>
+          <div><dt>关键问题</dt><dd>总量可见，但增长来源、品类结构和客户价值不清晰</dd></div>
+          <div><dt>交付结果</dt><dd>销售、产品、客户三类主题视图与统一指标口径</dd></div>
+          <div><dt>分析方法</dt><dd>同比趋势 · ABC分类 · 帕累托 · RFM分层</dd></div>
+        </dl>
+
+        <div class="wide-case-layout">
+          <div class="case-gallery gallery-landscape reveal">
+            <button class="gallery-stage zoom-trigger" type="button"
+                    data-image="assets/sales-value-sanitized.png" data-title="销售经营与客户价值分析（脱敏版）">
+              <span class="window-bar"><i></i><i></i><i></i><b>面试脱敏版 · 点击放大</b></span>
+              <img class="gallery-image" src="assets/sales-value-sanitized.png"
+                   alt="销售经营与客户价值分析脱敏看板" loading="lazy">
+              <span class="open-dashboard">查看完整看板</span>
+            </button>
+          </div>
+
+          <div class="case-narrative reveal">
+            <div class="narrative-block">
+              <h3>业务问题</h3>
+              <p>销售总量能够说明规模，却难以解释增长来自哪些品类、区域和客户，需要建立可逐层下钻的分析框架。</p>
+            </div>
+            <div class="narrative-block">
+              <h3>数据处理</h3>
+              <p>统一订单、产品、客户与地区维度，清洗分类字段并建立销售额、订单数、客户数、同比与占比等指标口径。</p>
+            </div>
+            <div class="narrative-block">
+              <h3>分析方法</h3>
+              <ul>
+                <li>时间趋势：年度、季度、月份与同比</li>
+                <li>产品结构：ABC分类与帕累托累计占比</li>
+                <li>客户价值：RFM分层与重点客户识别</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="insight-grid reveal">
+          <article><span>01</span><h3>品类集中度</h3><p>核心品类贡献80%以上销售额，产品结构具有明显集中度，适合用ABC方法确定重点品类。</p></article>
+          <article><span>02</span><h3>区域经营</h3><p>结合省份销售额排名及订单—客户散点分布，识别规模区域与结构差异。</p></article>
+          <article><span>03</span><h3>客户运营</h3><p>基于最近消费、购买频次和消费金额进行客户分层，为保留、培育与召回策略提供依据。</p></article>
+        </div>
+
+        <dl class="result-strip reveal">
+          <div><dt>指数100</dt><dd>销售规模基准</dd></div>
+          <div><dt>1W+</dt><dd>订单数量级</dd></div>
+          <div><dt>1W+</dt><dd>客户数量级</dd></div>
+          <div><dt>3个</dt><dd>主题分析视图</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="case-target-bi" class="case-study section">
+      <div class="container">
+        <header class="case-header reveal">
+          <span class="case-index">03</span>
+          <div>
+            <h2>销售目标达成与渠道经营 BI</h2>
+            <p class="case-meta"><span></span>数据分析 / 经营 BI</p>
+            <p class="case-lead">围绕销售目标与经营差异，搭建“管理简报—组合分析—日报明细”三层报告体系。</p>
+          </div>
+        </header>
+
+        <dl class="boss-snapshot reveal" aria-label="项目速览">
+          <div><dt>职责范围</dt><dd>目标拆解 · 指标口径 · 多维诊断 · 报告分层</dd></div>
+          <div><dt>关键问题</dt><dd>目标、实际和同期数据分散，未达成原因定位较慢</dd></div>
+          <div><dt>交付结果</dt><dd>管理简报、组合分析、日报明细三层报告体系</dd></div>
+          <div><dt>口径原则</dt><dd>只比较完整可比周期，月中数据独立标识</dd></div>
+        </dl>
+
+        <div class="wide-case-layout">
+          <div class="case-gallery gallery-landscape reveal">
+            <button class="gallery-stage zoom-trigger" type="button"
+                    data-image="assets/target-bi-sanitized.png" data-title="销售目标与渠道经营分析（脱敏版）">
+              <span class="window-bar"><i></i><i></i><i></i><b>面试脱敏版 · 点击放大</b></span>
+              <img class="gallery-image" src="assets/target-bi-sanitized.png"
+                   alt="销售目标与渠道经营分析脱敏看板" loading="lazy">
+              <span class="open-dashboard">查看完整看板</span>
+            </button>
+          </div>
+
+          <div class="case-narrative reveal">
+            <div class="narrative-block">
+              <h3>管理目标</h3>
+              <p>把目标、实际、同比、环比与YTD放在同一套指标体系中，快速定位未达成的渠道、品类和地区。</p>
+            </div>
+            <div class="narrative-block">
+              <h3>报告分层</h3>
+              <ul>
+                <li>管理层：总体达成率与关键差异</li>
+                <li>业务层：渠道、品类、省份组合拆解</li>
+                <li>执行层：日度明细与责任对象追踪</li>
+              </ul>
+            </div>
+            <div class="quality-note">
+              <strong>口径约束</strong>
+              <p>同比、环比必须采用可比的完整周期；月中数据与完整上月分开标识，避免把时间窗口差异误判为经营下滑。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="method-strip reveal" aria-label="项目方法">
+          <div><span>01</span><strong>目标拆解</strong><small>总目标到渠道与品类</small></div>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
+          <div><span>02</span><strong>差异诊断</strong><small>实际、目标与同期比较</small></div>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
+          <div><span>03</span><strong>多维下钻</strong><small>渠道、区域与产品属性</small></div>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
+          <div><span>04</span><strong>报告分发</strong><small>简报、组合分析与日报</small></div>
+        </div>
+
+        <dl class="result-strip reveal">
+          <div><dt>指数87</dt><dd>实际销售规模</dd></div>
+          <div><dt>指数100</dt><dd>目标销售规模</dd></div>
+          <div><dt>80–90%</dt><dd>销售额完成率区间</dd></div>
+          <div><dt>4类</dt><dd>分销渠道</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="case-user-behavior" class="case-study case-study-alt section">
+      <div class="container">
+        <header class="case-header reveal">
+          <span class="case-index">04</span>
+          <div>
+            <h2>电商用户行为、留存与转化分析</h2>
+            <p class="case-meta"><span></span>用户行为分析 / Power BI</p>
+            <p class="case-lead">围绕活跃趋势、同期群留存和行为漏斗，梳理用户从浏览到购买的关键路径与时间特征。</p>
+          </div>
+        </header>
+
+        <dl class="boss-snapshot reveal" aria-label="项目速览">
+          <div><dt>职责范围</dt><dd>行为数据整理 · 留存口径 · 漏斗分析 · 可视化</dd></div>
+          <div><dt>关键问题</dt><dd>活跃节奏、留存质量和行为流失环节缺少统一视角</dd></div>
+          <div><dt>交付结果</dt><dd>活跃趋势与留存漏斗两类分析视图</dd></div>
+          <div><dt>质量原则</dt><dd>未成熟同期群标记N/A，异常格式不进入结论</dd></div>
+        </dl>
+
+        <div class="wide-case-layout">
+          <div class="case-gallery gallery-landscape reveal">
+            <button class="gallery-stage zoom-trigger" type="button"
+                    data-image="assets/user-behavior-sanitized.png" data-title="电商用户行为与留存分析（脱敏版）">
+              <span class="window-bar"><i></i><i></i><i></i><b>面试脱敏版 · 点击放大</b></span>
+              <img class="gallery-image" src="assets/user-behavior-sanitized.png"
+                   alt="电商用户行为与留存分析脱敏看板" loading="lazy">
+              <span class="open-dashboard">查看完整看板</span>
+            </button>
+          </div>
+
+          <div class="case-narrative reveal">
+            <div class="narrative-block">
+              <h3>分析问题</h3>
+              <p>用户在什么时间最活跃、首次活跃后是否持续留存、浏览与购买之间在哪个环节流失，是本项目重点回答的问题。</p>
+            </div>
+            <div class="narrative-block">
+              <h3>分析框架</h3>
+              <ul>
+                <li>日活与小时活跃趋势</li>
+                <li>按首日分组的同期群留存</li>
+                <li>浏览—加购—收藏—购买漏斗</li>
+                <li>商品大类及单品偏好</li>
+              </ul>
+            </div>
+            <div class="quality-note">
+              <strong>数据质量复核</strong>
+              <p>留存率仅计算已到达观察日的同期群，未成熟周期标记为N/A；原始看板中异常的百分比格式不进入最终业务结论。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="insight-grid reveal">
+          <article><span>01</span><h3>活跃节奏</h3><p>结合日期与24小时趋势识别高峰时段，为内容发布、活动和触达时间提供分析依据。</p></article>
+          <article><span>02</span><h3>留存诊断</h3><p>使用同期群方法比较不同首日用户的后续活跃表现，避免被总体均值掩盖差异。</p></article>
+          <article><span>03</span><h3>路径转化</h3><p>将浏览、加购、收藏和购买统一到用户行为路径中，定位主要流失环节与高潜商品。</p></article>
+        </div>
+
+        <dl class="result-strip reveal">
+          <div><dt>8W+</dt><dd>浏览行为量级</dd></div>
+          <div><dt>5K+</dt><dd>加购行为量级</dd></div>
+          <div><dt>2K+</dt><dd>收藏行为量级</dd></div>
+          <div><dt>2K+</dt><dd>购买行为量级</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="method" class="method-section section">
+      <div class="container">
+        <div class="section-intro reveal">
+          <div>
+            <h2>方法与能力</h2>
+            <span class="section-rule"></span>
+          </div>
+          <p>从业务问题出发，完成数据底座、指标体系、分析诊断、自动化触达与质量复核。</p>
+        </div>
+
+        <ol class="capability-rail reveal">
+          <li>
+            <span class="capability-index">01</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><ellipse cx="9" cy="6" rx="6" ry="3"/><path d="M3 6v7c0 1.7 2.7 3 6 3M15 6v5M14 15h7v6h-7z"/></svg>
+            <h3>数据体系搭建</h3>
+            <p>明细表 · 节点表 · 分析宽表</p>
+          </li>
+          <li>
+            <span class="capability-index">02</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/><path d="M17 4h4v4"/></svg>
+            <h3>数据分析与可视化</h3>
+            <p>Power BI · ECharts · 多维分析</p>
+          </li>
+          <li>
+            <span class="capability-index">03</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="6" r="3"/><path d="M12 9v4M5 21v-5h14v5M5 16h14M5 16v-3M19 16v-3"/></svg>
+            <h3>自动化与预警</h3>
+            <p>Python定时任务 · n8n · Webhook</p>
+          </li>
+          <li>
+            <span class="capability-index">04</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3M9 10h6v4H9z"/></svg>
+            <h3>AI提效与质检</h3>
+            <p>Codex/Cursor · 异常校验 · 文档沉淀</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="about" class="contact-section">
+      <div class="container contact-inner reveal">
+        <div>
+          <h2>让数据分析真正进入业务流程</h2>
+          <p>期待在数据自动化、经营分析与AI提效方向持续创造可复用的交付成果。</p>
+        </div>
+        <div class="contact-actions">
+          <div>
+            <a class="button button-primary" href="#projects">
+              返回项目
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            </a>
+          </div>
+          <p>联系请通过招聘平台<span></span>上海</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy-note">
+      <div class="container">
+        <strong>数据说明</strong>
+        <p>公开页面不包含原始截图或真实明细；名称均为匿名编码，金额与数量采用指数、区间或量级展示，仅用于说明分析方法与交付能力。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>冉小龙 · 数据分析与自动化作品集</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+
+  <dialog class="image-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-header">
+      <h2 id="dialog-title">完整看板</h2>
+      <button class="dialog-close" type="button" aria-label="关闭完整看板">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+    <div class="dialog-body">
+      <img src="" alt="">
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

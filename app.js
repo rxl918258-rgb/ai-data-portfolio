@@ -1,0 +1,108 @@
+const menuToggle = document.querySelector(".menu-toggle");
+const siteNav = document.querySelector(".site-nav");
+const navLinks = [...document.querySelectorAll(".site-nav a")];
+const dialog = document.querySelector(".image-dialog");
+const dialogImage = dialog.querySelector(".dialog-body img");
+const dialogTitle = dialog.querySelector("#dialog-title");
+const dialogClose = dialog.querySelector(".dialog-close");
+
+menuToggle.addEventListener("click", () => {
+  const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+  menuToggle.setAttribute("aria-expanded", String(!isOpen));
+  siteNav.classList.toggle("is-open", !isOpen);
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menuToggle.setAttribute("aria-expanded", "false");
+    siteNav.classList.remove("is-open");
+  });
+});
+
+document.querySelectorAll("[data-gallery]").forEach((gallery) => {
+  const tabs = [...gallery.querySelectorAll(".gallery-tab")];
+  const stage = gallery.querySelector(".gallery-stage");
+  const image = gallery.querySelector(".gallery-image");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((item) => {
+        const isCurrent = item === tab;
+        item.classList.toggle("is-active", isCurrent);
+        item.setAttribute("aria-selected", String(isCurrent));
+      });
+
+      image.src = tab.dataset.image;
+      image.alt = tab.dataset.alt;
+      stage.dataset.image = tab.dataset.image;
+      stage.dataset.title = tab.dataset.title;
+    });
+  });
+});
+
+document.querySelectorAll(".zoom-trigger").forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const imagePath = trigger.dataset.image;
+    const title = trigger.dataset.title || "完整看板";
+    dialogImage.src = imagePath;
+    dialogImage.alt = `${title}完整看板`;
+    dialogTitle.textContent = title;
+    dialog.showModal();
+    document.body.classList.add("dialog-open");
+  });
+});
+
+function closeDialog() {
+  dialog.close();
+  document.body.classList.remove("dialog-open");
+  dialogImage.src = "";
+}
+
+dialogClose.addEventListener("click", closeDialog);
+dialog.addEventListener("click", (event) => {
+  if (event.target === dialog) closeDialog();
+});
+dialog.addEventListener("cancel", () => {
+  document.body.classList.remove("dialog-open");
+  dialogImage.src = "";
+});
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.08, rootMargin: "0px 0px -6% 0px" },
+);
+
+document.querySelectorAll(".reveal").forEach((element) => {
+  revealObserver.observe(element);
+});
+
+const sectionMap = new Map([
+  ["projects", document.querySelector('#site-nav a[href="#projects"]')],
+  ["method", document.querySelector('#site-nav a[href="#method"]')],
+  ["about", document.querySelector('#site-nav a[href="#about"]')],
+]);
+
+const navObserver = new IntersectionObserver(
+  (entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+    if (!visible) return;
+    navLinks.forEach((link) => link.classList.remove("is-active"));
+    sectionMap.get(visible.target.id)?.classList.add("is-active");
+  },
+  { rootMargin: "-22% 0px -60% 0px", threshold: [0.05, 0.2, 0.5] },
+);
+
+sectionMap.forEach((_, id) => {
+  const section = document.getElementById(id);
+  if (section) navObserver.observe(section);
+});
