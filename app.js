@@ -83,6 +83,43 @@ document.querySelectorAll(".reveal").forEach((element) => {
   revealObserver.observe(element);
 });
 
+const collapsibleCases = [...document.querySelectorAll(".case-details")];
+
+function syncCaseToggleLabel(detail) {
+  const toggle = detail.querySelector(".case-details-toggle");
+  if (!toggle) return;
+  toggle.textContent = detail.open ? "收起补充案例" : "展开完整案例";
+}
+
+collapsibleCases.forEach((detail) => {
+  syncCaseToggleLabel(detail);
+  detail.addEventListener("toggle", () => {
+    syncCaseToggleLabel(detail);
+  });
+});
+
+function openCaseFromHash(hashValue = window.location.hash) {
+  if (!hashValue) return;
+  const section = document.querySelector(hashValue);
+  const detail = section?.querySelector('.case-details[data-auto-open="true"]');
+
+  if (!detail) return;
+  detail.open = true;
+  syncCaseToggleLabel(detail);
+}
+
+document.querySelectorAll('a[href^="#case-"]').forEach((link) => {
+  link.addEventListener("click", () => {
+    openCaseFromHash(link.getAttribute("href"));
+  });
+});
+
+window.addEventListener("hashchange", () => {
+  openCaseFromHash();
+});
+
+openCaseFromHash();
+
 const sectionMap = new Map([
   ["projects", document.querySelector('#site-nav a[href="#projects"]')],
   ["method", document.querySelector('#site-nav a[href="#method"]')],
