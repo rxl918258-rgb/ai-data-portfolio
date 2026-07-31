@@ -820,6 +820,69 @@ img[src*="user-behavior-sanitized"] {
   background: linear-gradient(180deg, #fff 0%, var(--warm) 100%);
 }
 
+.project-float-nav {
+  position: fixed;
+  top: 50%;
+  right: max(18px, calc((100vw - var(--container)) / 2 - 118px));
+  z-index: 42;
+  display: grid;
+  width: 94px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(221, 227, 232, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 18px 46px rgba(22, 63, 94, 0.14);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(calc(-50% + 12px));
+  transition: opacity 220ms ease, transform 220ms ease;
+  backdrop-filter: blur(16px);
+}
+
+.project-float-nav.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%);
+}
+
+.project-float-title {
+  padding: 5px 4px 9px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-align: center;
+}
+
+.project-float-nav a {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 5px;
+  align-items: center;
+  min-height: 42px;
+  padding: 5px 6px;
+  color: #66727d;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.project-float-nav a:hover,
+.project-float-nav a:focus-visible,
+.project-float-nav a.is-active {
+  color: white;
+  background: var(--forest);
+  transform: translateX(-3px);
+}
+
+.project-float-nav b {
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
 .overview-row {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -1913,6 +1976,10 @@ img[src*="user-behavior-sanitized"] {
     --container: 860px;
   }
 
+  .project-float-nav {
+    right: 14px;
+  }
+
   .hero-inner {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -2046,6 +2113,40 @@ img[src*="user-behavior-sanitized"] {
 @media (max-width: 760px) {
   :root {
     --header-height: 66px;
+  }
+
+  .project-float-nav {
+    top: auto;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    grid-template-columns: repeat(4, 1fr);
+    width: auto;
+    padding: 6px;
+    border-radius: 14px;
+    transform: translateY(14px);
+  }
+
+  .project-float-nav.is-visible {
+    transform: none;
+  }
+
+  .project-float-title {
+    display: none;
+  }
+
+  .project-float-nav a {
+    grid-template-columns: auto 1fr;
+    justify-content: center;
+    min-height: 44px;
+    padding: 5px 8px;
+    text-align: center;
+  }
+
+  .project-float-nav a:hover,
+  .project-float-nav a:focus-visible,
+  .project-float-nav a.is-active {
+    transform: none;
   }
 
   .container,

@@ -120,6 +120,62 @@ window.addEventListener("hashchange", () => {
 
 openCaseFromHash();
 
+const projectFloatNav = document.querySelector("[data-project-nav]");
+const projectFloatLinks = [...projectFloatNav.querySelectorAll('a[href^="#case-"]')];
+const projectSections = projectFloatLinks
+  .map((link) => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
+const projectsOverview = document.querySelector("#projects");
+const methodSection = document.querySelector("#method");
+let requestedProjectId = null;
+let requestedProjectTimer;
+
+function setActiveProject(sectionId) {
+  projectFloatLinks.forEach((link) => {
+    const isActive = link.getAttribute("href") === `#${sectionId}`;
+    link.classList.toggle("is-active", isActive);
+    if (isActive) link.setAttribute("aria-current", "true");
+    else link.removeAttribute("aria-current");
+  });
+}
+
+function syncProjectNavigation() {
+  const start = projectsOverview.offsetTop - window.innerHeight * 0.35;
+  const end = methodSection.offsetTop - window.innerHeight * 0.45;
+  projectFloatNav.classList.toggle("is-visible", window.scrollY >= start && window.scrollY < end);
+
+  if (requestedProjectId) {
+    setActiveProject(requestedProjectId);
+    return;
+  }
+
+  const readingLine = window.scrollY + window.innerHeight * 0.32;
+  const current = projectSections.reduce(
+    (active, section) => (section.offsetTop <= readingLine ? section : active),
+    projectSections[0],
+  );
+  if (current) setActiveProject(current.id);
+}
+
+projectFloatLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    requestedProjectId = link.getAttribute("href").slice(1);
+    window.clearTimeout(requestedProjectTimer);
+    requestedProjectTimer = window.setTimeout(() => {
+      requestedProjectId = null;
+      syncProjectNavigation();
+    }, 3000);
+    setActiveProject(requestedProjectId);
+  });
+});
+
+setActiveProject(projectSections[0]?.id);
+syncProjectNavigation();
+window.addEventListener("scroll", syncProjectNavigation, { passive: true });
+window.addEventListener("resize", syncProjectNavigation);
+window.addEventListener("load", syncProjectNavigation);
+requestAnimationFrame(() => requestAnimationFrame(syncProjectNavigation));
+
 const sectionMap = new Map([
   ["projects", document.querySelector('#site-nav a[href="#projects"]')],
   ["method", document.querySelector('#site-nav a[href="#method"]')],
