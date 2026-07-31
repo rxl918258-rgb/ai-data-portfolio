@@ -32,6 +32,7 @@ body {
   font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
   font-size: 16px;
   line-height: 1.75;
+  font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -431,13 +432,8 @@ svg {
   object-position: top;
 }
 
-/* Keep the original chart hierarchy while gently moving the green exports
-   toward the site's restrained blue palette. */
-img[src*="sales-value-sanitized"],
-img[src*="target-bi-sanitized"],
-img[src*="user-behavior-sanitized"] {
-  filter: hue-rotate(58deg) saturate(0.68) brightness(1.01) contrast(1.01);
-}
+/* Dashboard images (sales-value / target-bi / user-behavior) are exported in
+   the site's blue-green palette, so no runtime colour filter is needed. */
 
 .dashboard-window-back {
   top: 16px;
@@ -823,7 +819,7 @@ img[src*="user-behavior-sanitized"] {
 .project-float-nav {
   position: fixed;
   top: 50%;
-  right: max(18px, calc((100vw - var(--container)) / 2 - 118px));
+  right: 18px;
   z-index: 42;
   display: grid;
   width: 94px;

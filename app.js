@@ -55,7 +55,6 @@ document.querySelectorAll(".zoom-trigger").forEach((trigger) => {
 function closeDialog() {
   dialog.close();
   document.body.classList.remove("dialog-open");
-  dialogImage.src = "";
 }
 
 dialogClose.addEventListener("click", closeDialog);
@@ -64,7 +63,6 @@ dialog.addEventListener("click", (event) => {
 });
 dialog.addEventListener("cancel", () => {
   document.body.classList.remove("dialog-open");
-  dialogImage.src = "";
 });
 
 const revealObserver = new IntersectionObserver(
