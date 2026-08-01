@@ -65,6 +65,14 @@ dialog.addEventListener("cancel", () => {
   document.body.classList.remove("dialog-open");
 });
 
+document.querySelectorAll(".dialog-thumb").forEach((thumb) => {
+  thumb.addEventListener("click", () => {
+    dialogImage.src = thumb.dataset.image;
+    dialogTitle.textContent = thumb.dataset.title;
+    document.querySelectorAll(".dialog-thumb").forEach((t) => t.classList.toggle("is-active", t === thumb));
+  });
+});
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
