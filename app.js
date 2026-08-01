@@ -73,6 +73,20 @@ document.querySelectorAll(".dialog-thumb").forEach((thumb) => {
   });
 });
 
+// Hero 缩略图拼贴：点击进对应 dialog 并高亮
+document.querySelectorAll(".collage-thumb").forEach((thumb) => {
+  thumb.addEventListener("click", () => {
+    document.querySelectorAll(".collage-thumb").forEach((t) => t.classList.toggle("is-active", t === thumb));
+  });
+});
+
+// 主看板 / 下钻 切换（CSS focal crop 模拟主看板）
+const dialogMode = document.querySelector(".dialog-mode");
+dialogMode.addEventListener("click", () => {
+  const isMain = dialogImage.classList.toggle("is-main");
+  dialogMode.textContent = isMain ? "下钻" : "主看板";
+});
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {

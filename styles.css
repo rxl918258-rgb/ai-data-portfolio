@@ -2029,6 +2029,68 @@ svg {
   box-shadow: var(--shadow-soft);
 }
 
+/* 主看板：focal crop 模拟“一眼重点”，点击切换回完整下钻 */
+.dialog-body img.is-main {
+  object-fit: cover;
+  object-position: 50% 16%;
+  height: 52vh;
+  max-width: 100%;
+}
+
+/* Hero 四张看板缩略图拼贴 */
+.hero-collage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.collage-thumb {
+  font: 500 12px/1.2 "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  color: var(--ink-soft);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 9px 12px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.collage-thumb:hover,
+.collage-thumb:focus-visible {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+  outline: none;
+}
+
+.collage-thumb.is-active {
+  color: #fff;
+  background: var(--forest);
+  border-color: var(--forest);
+}
+
+/* dialog 主看板/下钻 切换按钮 */
+.dialog-mode {
+  font: 600 13px/1 "JetBrains Mono", ui-monospace, monospace;
+  color: var(--ink-soft);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  margin-right: auto;
+}
+
+.dialog-mode:hover,
+.dialog-mode:focus-visible {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+  outline: none;
+}
+
 .dialog-thumbs {
   display: flex;
   gap: 8px;
