@@ -1896,6 +1896,17 @@ svg {
   line-height: 1.3;
 }
 
+.contact-inner .avatar {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 0 0 16px;
+  border-radius: 50%;
+  border: 3px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  object-fit: cover;
+}
+
 .contact-inner p {
   margin: 15px 0 0;
   color: var(--muted);
@@ -2359,6 +2370,10 @@ svg {
 
   .ai-extension {
     grid-template-columns: 1fr;
+  }
+
+  .contact-inner .avatar {
+    margin: 0 auto 16px;
   }
 
   .pipeline-steps {
