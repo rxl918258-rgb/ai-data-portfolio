@@ -1904,14 +1904,11 @@ svg {
   line-height: 1.3;
 }
 
-.contact-hero .avatar {
-  display: block;
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 18px;
+.resume-avatar {
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  border: 3px solid var(--line);
-  box-shadow: var(--shadow-soft);
+  border: 2px solid var(--line);
   object-fit: cover;
 }
 
@@ -2380,9 +2377,6 @@ svg {
     grid-template-columns: 1fr;
   }
 
-  .contact-hero .avatar {
-    margin: 0 auto 16px;
-  }
 
   .pipeline-steps {
     max-width: 720px;
