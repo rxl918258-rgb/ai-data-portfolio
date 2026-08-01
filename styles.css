@@ -1896,11 +1896,11 @@ svg {
   line-height: 1.3;
 }
 
-.contact-inner .avatar {
+.contact-actions .avatar {
   display: block;
-  width: 96px;
-  height: 96px;
-  margin: 0 0 16px;
+  width: 92px;
+  height: 92px;
+  margin: 0 0 18px;
   border-radius: 50%;
   border: 3px solid var(--line);
   box-shadow: var(--shadow-soft);
@@ -2372,7 +2372,7 @@ svg {
     grid-template-columns: 1fr;
   }
 
-  .contact-inner .avatar {
+  .contact-actions .avatar {
     margin: 0 auto 16px;
   }
 
